@@ -3,6 +3,7 @@ const Result = require('./Result');
 class Handler {
     constructor(bmiCalcService){
         this.handleCalculation = async (event, context, callback) => {
+            console.log('handle calculation: ' + JSON.stringify(event));
             try {
                 let weight = event.queryStringParameters.weight;
                 let height = event.queryStringParameters.height;
